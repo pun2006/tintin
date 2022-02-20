@@ -780,6 +780,9 @@ int utf8_to_cp1251(char *input, char *output)
 			if (result)
 			{
 				*pto++ = result;
+				if (result == 255) {
+				    *pto++ = result;
+				} 
 			}
 			else
 			{
